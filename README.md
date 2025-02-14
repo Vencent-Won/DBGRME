@@ -19,7 +19,7 @@ python benign_training.py --dataset ml-1m --model_name lgn --epoch 1000 --lr_ben
 ### Model Extraction
 
 ```python
-python GTQ-generator.py --dump_path 'Log-Gen' --dataset ml-100k --victim_model lgn --query_budget 200000 --iter_clone 4 --gpu 0 --seed 0 --gen_top_k 1 --num_fakers 300 --lr_clone 1e-2 --lr_generator 1e-3
+python DBGRME.py --dump_path 'Log-Gen' --dataset ml-100k --victim_model lgn --query_budget 200000 --iter_clone 4 --gpu 0 --seed 0 --gen_top_k 1 --num_fakers 300 --lr_clone 1e-2 --lr_generator 1e-3
 ```
 
 ## Parameters
