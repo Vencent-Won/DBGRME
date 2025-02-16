@@ -22,7 +22,7 @@ class BPR(nn.Module):
         nn.init.normal_(self.embedding_user.weight, std=0.1)
         nn.init.normal_(self.embedding_item.weight, std=0.1)
 
-    def loss(self, user, pos, neg, labels):  # 统一输入为tensor
+    def loss(self, user, pos, neg, labels): 
         user_emb = self.embedding_user.weight[user]
         pos_emb = self.embedding_item.weight[pos]
         neg_emb = self.embedding_item.weight[neg]
@@ -62,7 +62,7 @@ class BPR(nn.Module):
 
         return Loss
 
-    def getUsersRating(self, user):  # 统一输入为单个用户tensor
+    def getUsersRating(self, user):  
         user_emb = self.embedding_user.weight[user]
         item_emb = self.embedding_item.weight
 
@@ -149,7 +149,7 @@ class NCF(nn.Module):
 
         return Loss
 
-    def getUsersRating(self, users):  # 统一输入为tensor
+    def getUsersRating(self, users):  
         embed_user_MLP = self.embedding_user.weight[users]
         embed_item_MLP = self.embedding_item.weight
 
